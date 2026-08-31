@@ -4,12 +4,13 @@ from fastapi.exceptions import RequestValidationError
 
 from api.config import config
 from api.controller import api_router
-from api.handler import general_exception_handler
-from api.handler import internal_server_handler
-from api.handler import no_content_handler
-from api.handler import validation_exception_handler
-from exceptions.exceptions import InternalServerError
-from exceptions.exceptions import NoContentError
+from api.handler import (
+    general_exception_handler,
+    internal_server_handler,
+    no_content_handler,
+    validation_exception_handler,
+)
+from exceptions.exceptions import InternalServerError, NoContentError
 
 app = FastAPI()
 app.include_router(api_router)
