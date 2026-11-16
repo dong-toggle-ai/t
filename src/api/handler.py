@@ -1,14 +1,12 @@
 import logging
 
-from fastapi import Request
-from fastapi import Response
+from fastapi import Request, Response
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from starlette import status
 from starlette.responses import JSONResponse
 
-from exceptions.exceptions import InternalServerError
-from exceptions.exceptions import NoContentError
+from exceptions.exceptions import InternalServerError, NoContentError
 
 logger = logging.getLogger("handler")
 
